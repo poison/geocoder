@@ -13,7 +13,7 @@ export function HereLocationCommandMixin<TBase extends Constructor<AbstractComma
         protected async buildQuery(query: GeocodeQuery): Promise<HereGeocodeQueryInterface> {
             const params: HereGeocodeQueryInterface = {
                 app_id: this.appId,
-                app_code: this.appCode,
+                apiKey: this.appCode,
                 language: query.language,
                 searchtext: query.address,
                 maxresults: query.limit,

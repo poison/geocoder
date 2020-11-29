@@ -20,7 +20,7 @@ export class HereReverseCommand extends HereCommonCommandMixin(ReverseCommand)<H
     protected async buildQuery(query: ReverseQuery): Promise<HereReverseQueryInterface> {
         return {
             app_id: this.appId,
-            app_code: this.appCode,
+            apiKey: this.appCode,
             language: query.language,
             maxresults: query.limit,
             gen: 9,
